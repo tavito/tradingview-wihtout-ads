@@ -1,2 +1,5 @@
-# tradingview-wihtout-ads
-Google Chrome extension to automatically remove ads from TradingView.
+# TradingView wihtout ads
+
+Google Chrome / Edge extension that automatically remove ads from TradingView.
+
+ 
