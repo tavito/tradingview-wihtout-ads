@@ -3,9 +3,8 @@ var config = { attributes: true, childList: true, characterData: true };
 
 // select the ads node (ads container)
 const ads = document.querySelector("[data-role='toast-container']");
-// console.log("ads", ads);
+
 let goPro;
-// Hide "Go Pro" ad
 window.onload = function () {
   goPro = document.getElementById("overlap-manager-root");
   observerGoPro.observe(goPro, config);
@@ -32,9 +31,7 @@ var observerGoPro = new MutationObserver(function (mutations) {
     if (mutation.type == "childList") {
       if (mutation.addedNodes.length >= 1) {
         for (var i = 0; i < mutation.addedNodes.length; i++) {
-          if (
-            mutation.addedNodes[0].nextElementSibling // &&
-          ) {
+          if (mutation.addedNodes[0].nextElementSibling) {
             mutation.addedNodes[0].nextElementSibling.childNodes[0].remove();
             console.log("Go Pro ad removed!");
           }
